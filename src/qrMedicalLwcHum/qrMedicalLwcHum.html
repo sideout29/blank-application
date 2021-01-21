@@ -1,0 +1,353 @@
+<template>
+
+<lightning-progress-indicator current-step={currStep} type={progressType} has-error={hasError} variant="base">
+	<lightning-progress-step label={step1Label} onstepfocus={selectStep1} value="1"></lightning-progress-step>
+	<lightning-progress-step label={step2Label} onstepfocus={selectStep2} value="2"></lightning-progress-step>
+	<lightning-progress-step label={step3Label} onstepfocus={selectStep3} value="3"></lightning-progress-step>
+	<lightning-progress-step label={step4Label} onstepfocus={selectStep4} value="4"></lightning-progress-step>
+	<lightning-progress-step label={step5Label} onstepfocus={selectStep5} value="5"></lightning-progress-step>
+	<lightning-progress-step label={step6Label} onstepfocus={selectStep6} value="6"></lightning-progress-step>
+</lightning-progress-indicator>
+<div>
+	&nbsp;
+</div>
+
+<!--Step1-------------------------------------------------------------------------------------------------------------->
+<div if:true={isStep1}>
+	<button type="button" class="slds-button test-id__section-header-button slds-section__title-action"><span class="test-id__section-header-title slds-truncate">Prospect/Eligible-Enrolled Information</span></button>
+	<lightning-layout multiple-rows="true">
+
+
+		<lightning-layout-item class="slds-p-around_xxx-small" size="3">
+			<lightning-input type="search" label="Sales Support Representative" placeholder="Search User..." required>
+			</lightning-input>
+		</lightning-layout-item>			
+		<lightning-layout-item class="slds-p-around_xxx-small" size="3">
+			<lightning-input type="search" label="Sales Executive" placeholder="Search User..." required>
+			</lightning-input>
+		</lightning-layout-item>
+		<lightning-layout-item class="slds-p-around_xxx-small" size="3">
+			<lightning-input label="Quote ID" disabled>
+			</lightning-input>
+		</lightning-layout-item>			
+		<lightning-layout-item class="slds-p-around_xxx-small" size="3">
+			<lightning-input label="Submitted Quote ID" disabled>
+			</lightning-input>
+		</lightning-layout-item>			
+		<lightning-layout-item class="slds-p-around_xxx-small" size="3">
+			<lightning-input type="date" label="Effective Date" required>
+			</lightning-input>
+		</lightning-layout-item>
+		<lightning-layout-item class="slds-p-around_xxx-small" size="3">
+			<lightning-input label="Quote Name" >
+			</lightning-input>
+		</lightning-layout-item>
+		<lightning-layout-item class="slds-p-around_xxx-small" size="3">
+			<lightning-input label="Description" >
+			</lightning-input>
+		</lightning-layout-item>
+		<lightning-layout-item class="slds-p-around_xxx-small" size="3">
+			<lightning-input label="Target" >
+			</lightning-input>
+		</lightning-layout-item>
+		<lightning-layout-item class="slds-p-around_xxx-small" size="3">
+			<lightning-input type="Number" label="# of Eligible" >
+			</lightning-input>
+		</lightning-layout-item>
+		<lightning-layout-item class="slds-p-around_xxx-small" size="3">
+			<lightning-input type="Number" label="# of Declines">
+			</lightning-input>
+		</lightning-layout-item>
+		<lightning-layout-item class="slds-p-around_xxx-small" size="3">
+			<lightning-input type="Number" label="# in Waiting Period">
+			</lightning-input>
+		</lightning-layout-item>
+		<lightning-layout-item class="slds-p-around_xxx-small" size="3">
+			<lightning-input type="Number" label="# of Enrolled">
+			</lightning-input>
+		</lightning-layout-item>
+<legend class="slds-form-element__legend slds-form-element__label slds-p-around_small">Included in RFP</legend>
+<div class="slds-form-element__control">
+	<span class="slds-radio">
+		<input type="radio" id="radio-43" value="radio-43" name="default" checked="" />
+		<label class="slds-radio__label" for="radio-43">
+			<span class="slds-radio_faux"></span>
+			<span class="slds-form-element__label">Yes</span>
+		</label>
+	</span>
+	<span class="slds-radio">
+		<input type="radio" id="radio-44" value="radio-44" name="default" />
+		<label class="slds-radio__label" for="radio-44">
+			<span class="slds-radio_faux"></span>
+			<span class="slds-form-element__label">No</span>
+		</label>
+	</span>
+</div>
+		<lightning-layout-item class="slds-p-around_xxx-small" size="3">
+			<lightning-input type="Number" label="# of Spousal Waivers">
+			</lightning-input>
+		</lightning-layout-item>
+		<lightning-layout-item class="slds-p-around_xxx-small" size="3">
+			<lightning-input type="Number" label="# of COBRAs" >
+			</lightning-input>
+		</lightning-layout-item>
+		<lightning-layout-item class="slds-p-around_xxx-small" size="3">
+			<lightning-input type="Number" label="Key Competitors">
+			</lightning-input>
+		</lightning-layout-item>
+		<lightning-layout-item class="slds-p-around_xxx-small" size="3">
+			<lightning-input type="search" label="Included in RFP">
+			</lightning-input>
+		</lightning-layout-item>
+		<lightning-layout-item class="slds-p-around_xxx-small" size="2">
+<legend class="slds-form-element__legend slds-form-element__label slds-p-around_xxx-small">Included in RFP</legend>
+<div class="slds-form-element__control slds-list_horizontal slds-p-around_small">
+	<span class="slds-radio">
+		<input type="radio" id="radio-45" value="radio-45" name="default2" checked="" />
+		<label class="slds-radio__label" for="radio-45">
+			<span class="slds-radio_faux"></span>
+			<span class="slds-form-element__label">Yes</span>
+		</label>
+	</span>
+	<span class="slds-radio">
+		<input type="radio" id="radio-46" value="radio-46" name="default2" />
+		<label class="slds-radio__label" for="radio-46">
+			<span class="slds-radio_faux"></span>
+			<span class="slds-form-element__label">No</span>
+		</label>
+	</span>
+</div>
+		</lightning-layout-item>
+	</lightning-layout>
+</div>
+<!--Step2-------------------------------------------------------------------------------------------------------------->
+			<div if:true={isStep2}>
+			<button type="button" class="slds-button test-id__section-header-button slds-section__title-action"><span class="test-id__section-header-title slds-truncate">Competitor Information</span></button>
+<div class="slds-grid">
+				<lightning-layout >
+					<lightning-layout-item padding="around-small">
+						<div class="header-column">
+<lightning-input type="search"
+											label="Current Carrier" placeholder="Search Carriers..." required>
+		</lightning-input>						
+	</div>
+					</lightning-layout-item>
+					<lightning-layout-item padding="around-small">
+						<div class="header-column">
+		<lightning-combobox
+						name="OutToBid"
+						label="Reason Out to Bid"
+						value={value}
+						placeholder="Select an Option"
+						options={options}
+						onchange={handleChange} required></lightning-combobox>
+
+	</div>
+					</lightning-layout-item>
+					<lightning-layout-item padding="around-small">
+						<div class="header-column">
+		<lightning-input type="number"
+											label="# of Carriers in Last 5 Years"
+											step="1" required>
+		</lightning-input>						
+	</div>
+					</lightning-layout-item>
+				</lightning-layout>
+		</div>
+
+<div class="slds-grid">
+		<div class="slds-col slds-size_3-of-12">
+			<lightning-layout-item padding="around-small">
+				<div class="header-column">
+					<lightning-radio-group class="customRadioCls" name="radioGroup"
+													label="Key Competitors"
+													options={keyCompOptions}
+													value={keyCompValue}
+													type="radio">
+					</lightning-radio-group>
+				</div>
+			</lightning-layout-item>
+		</div>
+		<div class="slds-col slds-size_3-of-12">
+					<lightning-layout-item padding="around-small">
+						<div class="header-column">
+		<lightning-input type="number"
+											label="Yrs with Carrier"
+											step="1" required>
+		</lightning-input>						
+	</div>
+					</lightning-layout-item>
+		</div>
+</div>
+			</div>
+<!--Step3-------------------------------------------------------------------------------------------------------------->
+			<div if:true={isStep3}>
+			<button type="button" class="slds-button test-id__section-header-button slds-section__title-action"><span class="test-id__section-header-title slds-truncate">Contribution/Network Information</span></button>
+	<lightning-layout multiple-rows="true">
+		<lightning-layout-item class="slds-p-around_xxx-small">
+			<div class="header-column">
+            <lightning-helptext content="Select funding type to show additional input options for commision amount."></lightning-helptext>
+				<lightning-combobox
+						name="FundingType"
+						label="Funding Type"
+						value={fundingTypeValues}
+						placeholder="Select an Option"
+						options={fundingTypeOptions}
+						onchange={handleFundingTypeChange} required>
+				</lightning-combobox>
+			</div>
+		</lightning-layout-item>
+		<lightning-layout-item class="slds-p-around_xxx-small">
+			<div class="header-column">
+				<lightning-combobox
+						name="ContributionType"
+						label="Contribution Type"
+						value={contributionTypeValues}
+						placeholder="Select an Option"
+						options={contributionTypeOptions}
+						onchange={handleContributionTypeChange} required>
+				</lightning-combobox>
+			</div>
+		</lightning-layout-item>
+		<lightning-layout-item class="slds-p-around_xxx-small">
+			<div class="header-column">
+				<lightning-combobox
+						name="RateGuarantee"
+						label="Rate Guarantee"
+						value={rateGuaranteeValues}
+						placeholder="Select an Option"
+						options={rateGuaranteeOptions}
+						onchange={handleRateGuaranteeChange} required>
+				</lightning-combobox>
+			</div>
+		</lightning-layout-item>
+		<lightning-layout-item class="slds-p-around_xxx-small" >
+			<lightning-input type="Number" label="Contribution Amount" required>
+			</lightning-input>
+		</lightning-layout-item>
+	<template if:true={isFI}>
+	    <lightning-radio-group name="FICommissionType"
+						label="FI Commission Type"
+						options={fiCommissionTypeOptions}
+						value={fiCommissionTypeValues}
+						onchange={handleFICommissionTypeChange} required>
+						type="radio">
+		</lightning-radio-group>
+		<lightning-layout-item class="slds-p-around_xxx-small">
+			<lightning-input type="Number" label="FI Commissions" required>
+			</lightning-input>
+		</lightning-layout-item>
+	</template>
+	<template if:true={isASO}>
+	    <lightning-radio-group class="slds-p-around_xxx-small"
+		name="ASOCommissionType"
+						label="ASO Commission Type"
+						options={asoCommissionTypeOptions}
+						value={asoCommissionTypeValues}
+						onchange={handleASOCommissionTypeChange} required>
+						type="radio">
+		</lightning-radio-group>
+		<lightning-layout-item class="slds-p-around_xxx-small" >
+			<lightning-input type="Number" label="ASO Commissions" required>
+			</lightning-input>
+		</lightning-layout-item>
+	</template>
+	</lightning-layout>
+
+						</div>
+<!--Step4-------------------------------------------------------------------------------------------------------------->
+	<div if:true={isStep4} class="slds-grid--align-center ">
+	<button type="button" class="slds-button test-id__section-header-button slds-section__title-action"><span class="test-id__section-header-title slds-truncate">Requested Network</span></button>
+	<lightning-layout multiple-rows="false">
+ 		<div class="slds-col slds-size--1-of-2 slds-p-around_x-small">
+	    	<lightning-checkbox-group class="slds-p-around_xxx-small"
+							name="MedicalHMO"
+                              label="Requested Network - Medical HMO"
+                              options={medicalHMOOptions}
+                              value={medicalHMOOptionsValue}
+                              onchange={handleMedicalHMOChange}>
+			</lightning-checkbox-group>
+ 		</div>
+ 		<div class="slds-col slds-size--1-of-2">
+		    <lightning-checkbox-group class="slds-p-around_xxx-small"
+							name="MedicalPPO"
+                              label="Requested Network - Medical PPO"
+                              options={medicalPPOOptions}
+                              value={medicalPPOOptionsValue}
+                              onchange={handleMedicalPPOChange}>
+			</lightning-checkbox-group>
+    		<lightning-checkbox-group class="slds-p-around_xxx-small"
+							name="MedicalPOS"
+                              label="Requested Network - Medical POS"
+                              options={medicalPOSOptions}
+                              value={medicalPOSOptionsValue}
+                              onchange={handleMedicalPOSChange}>
+			</lightning-checkbox-group>
+    		<lightning-checkbox-group class="slds-p-around_xxx-small"
+							name="Rx"
+                              label="Requested Network - Rx"
+                              options={rxOptions}
+                              value={rxOptionsValue}
+                              onchange={handlerxChange} required>
+			</lightning-checkbox-group>
+ 		</div>
+	</lightning-layout>
+    <p>Selected Medical HMO Values are: {selectedmedicalHMOOptionsValue}</p>
+    <p>Selected Medical PPO Values are: {selectedmedicalPPOOptionsValue}</p>
+</div>
+<!--Step5-------------------------------------------------------------------------------------------------------------->
+	<div if:true={isStep5} class="slds-grid--align-center ">
+	<button type="button" class="slds-button test-id__section-header-button slds-section__title-action"><span class="test-id__section-header-title slds-truncate">Medical Profiles</span></button>
+    <div class="slds-text-heading_small slds-text-align_center slds-text-color_inverse" style="padding:0.5rem;background:#16325c">Medical Profiles are not required.</div>
+	<lightning-layout multiple-rows="true">
+ 		<div class="slds-col slds-size--1-of-1 slds-p-around_x-small">
+			<div class="header-column">
+<b class="slds-p-around_xxx-small">Medical Profiles</b>
+            <lightning-helptext content="Medical Profiles are not required."></lightning-helptext>
+	    	<lightning-checkbox-group class="slds-p-around_xxx-small"
+							name="MedicalProfiles"
+                              label=""
+                              options={medicalProfileOptions}
+                              value={medicalProfileOptionsValue}
+                              onchange={handleMedicalProfileChange}>
+			</lightning-checkbox-group>
+			</div>
+ 		</div>
+	</lightning-layout>
+    <p>Selected Medical Profiles are: {selectedmedicalProfileOptionsValue}</p>
+</div>
+<!--Step6-------------------------------------------------------------------------------------------------------------->
+	<div if:true={isStep6}>
+	<button type="button" class="slds-button test-id__section-header-button slds-section__title-action"><span class="test-id__section-header-title slds-truncate">Submit</span></button>
+	<lightning-layout multiple-rows="true">
+		<div class="slds-p-around_large">
+		<p>Submitting this last step of the quote will send the quote to underwriting.</p>
+		</div>
+		<div class="slds-p-around_large">
+			Agent Validation:
+			<lightning-icon class="slds-m-around_small" icon-name="action:approval" size="x-small" alternative-text="Valid" title="Valid"></lightning-icon>	
+		</div>
+
+	</lightning-layout>
+	</div>
+<!--Navigation-------------------------------------------------------------------------------------------------------------->
+	<div class="slds-m-top_medium slds-m-bottom_x-small">
+		<!-- Button group: simple buttons -->
+		<lightning-button-group>
+			<template if:false={isStep1}>
+				<lightning-button label="Previous" onclick={handlePrev}></lightning-button>
+			</template>
+			<template if:false={isStep6}>
+				<lightning-button label="Next" onclick={handleNext}></lightning-button>
+			</template>
+			<lightning-button label="Trigger Error" onclick={handleTriggerError}></lightning-button>
+			<lightning-button label="Clear Error" onclick={handleClearError}></lightning-button>
+			<template if:true={isStep6}>
+				<template if:false={hasError}>
+					<lightning-button variant="brand" label="Submit to Underwriting" title="Submit Quote Request" onclick={handleSubmit} class="slds-m-left_x-small"></lightning-button>
+				</template>
+			</template>
+		</lightning-button-group>
+	</div>
+	<lightning-button label="Change Progress Type" onclick={handleProgressType}></lightning-button>
+</template>

@@ -1,0 +1,29 @@
+<template>
+	<lightning-tabset>
+		<lightning-tab label="Medical">
+			<c-qr-medical-lwc-hum></c-qr-medical-lwc-hum>
+		</lightning-tab>
+		<!-------------------------------------------------------------------------------------->
+		<lightning-tab label="Dental" title="2nd tab extended title">
+    <lightning-checkbox-group name="Checkbox Group"
+                              label="Checkbox Group"
+                              options={options2}
+                              value={value2}
+                              onchange={handleChange2}></lightning-checkbox-group>
+    <p>Selected Values are: {selectedValues2}</p>
+		</lightning-tab>
+		<!-------------------------------------------------------------------------------------->
+		<lightning-tab label="Vision">
+			Vision
+		</lightning-tab>
+		<lightning-tab label="Life">
+			Life
+		</lightning-tab>
+		<lightning-tab label="Go365">
+			Go365
+		</lightning-tab>
+		<lightning-tab label="Wellness">
+			Wellness
+		</lightning-tab>
+	</lightning-tabset>
+</template>
